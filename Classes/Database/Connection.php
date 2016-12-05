@@ -1,5 +1,9 @@
 <?php
 
+namespace Database;
+
+use \PDO as PDO;
+
 final class Connection
 {
     /**
@@ -18,7 +22,7 @@ final class Connection
      * Connection info
      * @var array
      */
-    private static $dbaccess = array(
+    private static $config = array(
         'host'     => 'localhost',
         'port'     => 3306,
         'database' => 'test',
@@ -34,18 +38,15 @@ final class Connection
     /**
     * Create a new database connection instance.
     */
-    private function __construct()
+    protected function __construct()
     {
-        echo "Nueva Intancia";
-        echo '<br>';
-
         $this->set_charset();
 
         $this->set_pdo();
     }
 
 
-    private function set_pdo()
+    protected function set_pdo()
     {
         try {
             $this->pdo = new PDO($this->get_dsn(), $this->get_username(), $this->get_password(), $this->get_options());
@@ -58,7 +59,7 @@ final class Connection
     * Get the database connection instance.
     * @return Connnection
     */
-    public static function get()
+    public static function get_instance()
     {
         return self::$instance ?: self::$instance = new self();
     }
@@ -72,33 +73,57 @@ final class Connection
         return $this->pdo;
     }
 
+    /**
+     * Build DSN string
+     * @return string
+     */
     public function get_dsn()
     {
-        $dsn = array_except(self::$dbaccess, array('username', 'password', 'options'));
+        if ($dsn = array_take(self::$config, 'dsn')) {
+            return $dsn;
+        }
+
+        $dsn = array_except(self::$config, array('username', 'password', 'options'));
 
         array_rename_keys($dsn, array('database' => 'dbname'));
 
         return 'mysql:'.http_build_query(array_filter($dsn), '', ';');
     }
 
+    /**
+     * Get Database name
+     * @return string
+     */
     public function get_database()
     {
-        return self::$dbaccess['database'];
+        return self::$config['database'];
     }
 
-    public function get_username()
+    /**
+     * Get User name
+     * @return string
+     */
+    private function get_username()
     {
-        return self::$dbaccess['username'];
+        return self::$config['username'];
     }
 
+    /**
+     * Get password
+     * @return string
+     */
     private function get_password()
     {
-        return self::$dbaccess['password'];
+        return self::$config['password'];
     }
 
+    /**
+     * Get options array
+     * @return array
+     */
     private function get_options()
     {
-        return self::$dbaccess['options'];
+        return self::$config['options'];
     }
 
     /**
@@ -106,17 +131,24 @@ final class Connection
      */
     private function set_charset()
     {
-        $charset = @self::$dbaccess['charset'];
+        $charset = @self::$config['charset'];
 
-        if ($charset && version_compare(PHP_VERSION, '5.3.6', '<='))
-        {
-            self::$dbaccess['options'][PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES '$charset'";
+        if ($charset && version_compare(PHP_VERSION, '5.3.6', '<=')) {
+            self::$config['options'][PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES '$charset'";
         }
     }
 
-    public static function to()
+    /**
+     * Overwrite access data to connect
+     * @param  array  $config
+     */
+    public static function to(array $config)
     {
+        if ($file = array_take($config, 'file')) {
+            $config = require $file;
+        }
 
+        self::$config = array_replace_recursive(self::$config, $config);
     }
 
     /**
