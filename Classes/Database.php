@@ -6,6 +6,12 @@ class Database
     const QUERY_INSERT = 2;
 
     /**
+    * Database connection instance.
+    * @var Connection
+    */
+    private $db;
+
+    /**
      * SQL string to execute.
      * @var string
      */
@@ -15,7 +21,7 @@ class Database
     * Params to bind within query
     * @var array
     */
-    private $bindings = array(
+    private $binds = array(
         'select' => array(),
         'update' => array(),
         'join'   => array(),
@@ -66,7 +72,9 @@ class Database
     public static function query($query, array $binds = array())
     {
         $that = new self();
+
         $that->sql = $query;
+
         $that->binds = $binds;
 
         return $that;
@@ -81,9 +89,37 @@ class Database
     public function all()
     {
         $stmt = Database\Connection::get_instance()->get_pdo()->prepare($this->sql);
+
         $stmt->setFetchMode($this->fetch_mode);
+
         $stmt->execute($this->binds);
 
         return $stmt->fetchAll();
+    }
+
+    public function one(){
+        $stmt = Database\Connection::get_instance()->get_pdo()->prepare($this->sql);
+
+        $stmt->setFetchMode($this->fetch_mode);
+
+        $stmt->execute($this->binds);
+
+        return $stmt->fetch();
+    }
+
+    public function fetch($callback)
+    {
+        $rows = $this->all();
+
+        return array_map($callback, $rows);
+    }
+
+    public function to_sql()
+    {
+        if ($this->sql == null) {
+            $this->sql = 'Contruccion de SQL (comming soon)';
+        }
+
+        return $this->sql;
     }
 }

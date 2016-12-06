@@ -206,7 +206,7 @@ function options_for_select(array $options, $selected = null, $disabled = null)
 
         $attributes['selected'] = !is_null($selected) && in_array($key, (array) $selected);
         $attributes['disabled'] = !is_null($disabled) && in_array($key, (array) $disabled);
-        $attributes['value'] = $key;
+        $attributes['value'] =  is_integer($key) ? $value : $key;
 
         return tag('option', $attributes, $value);
     }));
