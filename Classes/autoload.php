@@ -10,11 +10,8 @@ if (!function_exists('__autoload')) {
 
         $filename = SPAGUETTI_CLASSES_PATH
                 . DIRECTORY_SEPARATOR
-                . str_replace('\\', '/', $class)
+                . str_replace('\\', DIRECTORY_SEPARATOR, $class)
                 . '.php';
-
-        echo $filename;
-        echo '<br>';
 
         if (!file_exists($filename) && !is_readable($filename)) {
             return false;
