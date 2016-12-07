@@ -1,0 +1,1584 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"array",
+				"array_map	(anual.php)"
+			],
+			[
+				"repo",
+				"reports_path"
+			],
+			[
+				"repos",
+				"reports_path"
+			],
+			[
+				"backogr",
+				"background-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"border-co",
+				"border-collapse"
+			],
+			[
+				"call_u",
+				"call_user_func_array"
+			],
+			[
+				"QUERY",
+				"QUERY_SELECT"
+			],
+			[
+				"mysql_err",
+				"mysql_error"
+			],
+			[
+				"total",
+				"total_facturado"
+			],
+			[
+				"acc",
+				"accesorios_nuevos"
+			],
+			[
+				"acce",
+				"accesorios_familia"
+			],
+			[
+				"get",
+				"get_list_familias"
+			],
+			[
+				"cel",
+				"cellpadding	Attr"
+			],
+			[
+				"celp",
+				"cellspacing	Attr"
+			],
+			[
+				"error_",
+				"error_reporting"
+			],
+			[
+				"years",
+				"years"
+			],
+			[
+				"get_incl",
+				"get_included_files"
+			],
+			[
+				"set",
+				"set_charset"
+			],
+			[
+				"array_re",
+				"array_rename_keys	(Array.php)"
+			],
+			[
+				"ol",
+				"old_key"
+			],
+			[
+				"new",
+				"new_keys"
+			],
+			[
+				"array_map",
+				"array_map_with_keys"
+			],
+			[
+				"var_",
+				"var_dump"
+			],
+			[
+				"echo",
+				"echo:ln	php_echo_ln"
+			],
+			[
+				"__",
+				"__FILE__"
+			],
+			[
+				"base",
+				"basename"
+			],
+			[
+				"SPA",
+				"SPAGUETTI_HELPERS_PATH"
+			],
+			[
+				"def",
+				"def?	defined(…)"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"funi",
+				"function_exists	(Autoloader.php)"
+			],
+			[
+				"_",
+				"__FILE__	(PHPExcel.php)"
+			],
+			[
+				"arr",
+				"array_take"
+			],
+			[
+				"get_de",
+				"get_defined_vars"
+			],
+			[
+				"aut",
+				"autofilter	(ExcelHelper.php)"
+			],
+			[
+				"PHP",
+				"PHPExcel_Worksheet"
+			],
+			[
+				"app",
+				"applyFromArray"
+			],
+			[
+				"head",
+				"header:json	php_header_json"
+			],
+			[
+				"lat",
+				"last_row"
+			],
+			[
+				"la",
+				"last_column"
+			],
+			[
+				"col",
+				"column1"
+			],
+			[
+				"colu",
+				"column1"
+			],
+			[
+				"row",
+				"row2"
+			],
+			[
+				"PHPE",
+				"PHPExcel_Worksheet"
+			],
+			[
+				"las",
+				"last_row"
+			],
+			[
+				"last",
+				"last_column"
+			],
+			[
+				"stat",
+				"start_row"
+			],
+			[
+				"last_",
+				"last_row"
+			],
+			[
+				"start_",
+				"start_row"
+			],
+			[
+				"start",
+				"start_column"
+			],
+			[
+				"excel_tabe",
+				"excel_table_body	(ExcelHelper.php)"
+			],
+			[
+				"excel_co",
+				"excel_column	(ExcelHelper.php)"
+			],
+			[
+				"ali",
+				"alignment	(05featuredemo.inc.php)"
+			],
+			[
+				"excel_cell",
+				"excel_cells_merge($sheet0"
+			],
+			[
+				"excel_sheet",
+				"excel_sheet_rename($sheet0"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"end",
+				"end_column"
+			],
+			[
+				"star",
+				"start_column"
+			],
+			[
+				"exce_tab",
+				"excel_table_header	(ExcelHelper.php)"
+			],
+			[
+				"sta",
+				"start_row"
+			],
+			[
+				"char",
+				"char_sum_int"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"header",
+				"header"
+			],
+			[
+				"shee",
+				"sheet0"
+			],
+			[
+				"excel_s",
+				"excel_get_sheet"
+			],
+			[
+				"excel_sh",
+				"excel_sheet_exists	(ExcelHelper.php)"
+			],
+			[
+				"index",
+				"index_or_name"
+			],
+			[
+				"sol",
+				"solicitud_id"
+			],
+			[
+				"coor",
+				"coordinador_id"
+			],
+			[
+				"nombre_",
+				"nombre_coordinador"
+			],
+			[
+				"include",
+				"include_blank	(html.php)"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"tb_",
+				"tb_coordinador"
+			],
+			[
+				"vale",
+				"value"
+			],
+			[
+				"sheet",
+				"sheet2"
+			],
+			[
+				"cell",
+				"cell2"
+			],
+			[
+				"heade",
+				"header:json	php_header_json"
+			],
+			[
+				"ro",
+				"row2"
+			],
+			[
+				"getCar",
+				"getCoordinate"
+			],
+			[
+				"json",
+				"json_encode($range	(index.php)"
+			],
+			[
+				"excel",
+				"excel_get_cell"
+			],
+			[
+				"form",
+				"format"
+			],
+			[
+				"numb",
+				"number"
+			],
+			[
+				"hori",
+				"horizontal_steps"
+			],
+			[
+				"ece",
+				"excel_get_cell"
+			],
+			[
+				"exel_get",
+				"excel_get_column"
+			],
+			[
+				"excel_get",
+				"excel_get_sheet"
+			],
+			[
+				"acti",
+				"active_sheet"
+			],
+			[
+				"inde",
+				"index_or_name"
+			],
+			[
+				"php",
+				"phpexcel"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"exce",
+				"execute"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"require",
+				"require_once	(14excel5.php)"
+			],
+			[
+				"sort_",
+				"sort_direction	(application_controller.rb)"
+			],
+			[
+				"dir",
+				"direction"
+			],
+			[
+				"post",
+				"posts"
+			],
+			[
+				"more",
+				"moderator	(user.rb)"
+			],
+			[
+				"resour",
+				"resource	(routes.rb)"
+			],
+			[
+				"primer",
+				"primer_apellido	(user.rb)"
+			],
+			[
+				"it",
+				"items"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"item",
+				"items"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"buil",
+				"build_ul_tag"
+			],
+			[
+				"respon",
+				"respond_to"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"sel",
+				"selected"
+			],
+			[
+				"multi",
+				"multipart	(html.php)"
+			],
+			[
+				"fu",
+				"fun	function …"
+			],
+			[
+				"JO",
+				"JOBS.BENKIO.TASKS.4"
+			],
+			[
+				"jo",
+				"JOBS"
+			],
+			[
+				"JOB",
+				"JOBS.BENKIO.DESCRIPTION"
+			],
+			[
+				"roll",
+				"roll_back"
+			],
+			[
+				"begin",
+				"begin_transaction"
+			],
+			[
+				"name",
+				"namespace	(Query.php)"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"TABLE",
+				"table"
+			],
+			[
+				"selec",
+				"select_tag	(html.php)"
+			],
+			[
+				"lin",
+				"link_to	(html.php)"
+			],
+			[
+				"is_nu",
+				"is_null"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"styl",
+				"style_attribute"
+			],
+			[
+				"ca",
+				"callback"
+			],
+			[
+				"attri",
+				"attributes"
+			],
+			[
+				"cou",
+				"column"
+			],
+			[
+				"primary",
+				"primary_key"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 192.0,
+		"last_filter": "got",
+		"selected_items":
+		[
+			[
+				"got",
+				"Goto Documentation"
+			],
+			[
+				"set s sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"synta php",
+				"Set Syntax: PHP"
+			],
+			[
+				"goto",
+				"Goto Documentation"
+			],
+			[
+				"enal",
+				"Package Control: Enable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"enbal",
+				"Package Control: Enable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"enba",
+				"Package Control: Enable Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"merg",
+				"Set Syntax: Sublimerge"
+			],
+			[
+				"package",
+				"Package Control: Disable Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Snippet: he",
+				"Snippet: php_header_json"
+			],
+			[
+				"phpfmt",
+				"phpfmt: format now"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp5.3/htdocs/test"
+	],
+	"file_history":
+	[
+		"/C/xampp5.3/htdocs/test/Spaguetti/Spaguetti.sublime-project",
+		"/C/xampp5.3/htdocs/sysstema/pdf.php",
+		"/C/xampp5.3/htdocs/sysstema/php_datos_evento.php",
+		"/C/xampp5.3/htdocs/sysstema/.gitignore",
+		"/C/xampp5.3/htdocs/sysstema/sysstema.sublime-project",
+		"/C/xampp5.3/htdocs/sysstema-project.sublime-workspace",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/administracion/reportes/anual_desglosado.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/ventas/php/ventas_datos_evento_cargardatas.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/ventas/php/ventas_datos_evento_cargardatas_datos_genericos_template.php",
+		"/C/xampp5.3/htdocs/sysstema-project.sublime-project",
+		"/C/xampp5.3/htdocs/sysstema/sftp-config.json",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/ventas/php/ventas_datos_evento.php",
+		"/C/xampp5.3/htdocs/sysstema/vendor/spaguetti/array.php",
+		"/C/xampp5.3/htdocs/sysstema/static/pre-index/pre_index.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/ventas/php/ventas_datos_evento_cargardatas_datos_genericos_access.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/administracion/reportes/anual.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Support/Arr.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Helpers/Array.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/administracion/reportes/index.php",
+		"/C/Users/TSB/Google Drive/reporte_pdf.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/css/reportes/anual.css",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/css/reportes/index.css",
+		"/C/xampp5.3/htdocs/test/QueryBuilder/DB.php",
+		"/C/xampp5.3/htdocs/test/QueryBuilder/Query.php",
+		"/C/xampp5.3/htdocs/test/index.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Classes/Database.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Classes/autoload.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Classes/Database/Connection.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/administracion/usuarios/perfil_usuario.php",
+		"/C/xampp5.3/htdocs/sysstema/conf/php_functions.php",
+		"/C/xampp5.3/htdocs/sysstema/class/class.bd.php",
+		"/C/xampp5.3/htdocs/sysstema/planillas.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/imprimir_pdf/contrato_propuesta.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/imprimir_pdf/class_imprimir.php",
+		"/C/Users/TSB/AppData/Local/Temp/fz3temp-2/php_definitions.php",
+		"/C/xampp5.3/htdocs/test/pdf.php",
+		"/C/xampp5.3/htdocs/sysstema/vendor/spaguetti/html.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/css/notificaciones_usuarios/conversaciones.css",
+		"/C/xampp5.3/htdocs/sysstema/vendor/spaguetti/Query.php",
+		"/C/xampp5.3/htdocs/sysstema/index.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/js/solicitud_viaticos.js",
+		"/C/Users/TSB/Downloads/QueryBuilder-master/QueryBuilder-master/DB.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Classes/Connection.php",
+		"/C/xampp/htdocs/laravel/config/database.php",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Helpers/autoload.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Helpers/Html.php",
+		"/C/Users/TSB/Downloads/Helpers-master/Helpers-master/HtmlHelper.php",
+		"/C/Users/TSB/Downloads/Helpers-master/Helpers-master/ArrayHelper.php",
+		"/C/xampp5.3/htdocs/test/Helpers/ArrayHelper.php",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/php_echo_ln.sublime-snippet",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/php_header_json.sublime-snippet",
+		"/C/Users/TSB/Downloads/Inflector-master/lib/helpers.php",
+		"/C/Users/TSB/Downloads/Inflector-master/composer.json",
+		"/C/Users/TSB/Downloads/Inflector-master/lib/inflector.php",
+		"/C/Users/TSB/Downloads/QueryBuilder-master/QueryBuilder-master/Query.php",
+		"/C/xampp5.3/htdocs/test/Spaguetti/Spaguetti.php",
+		"/C/xampp5.3/htdocs/test/QueryBuilder/SQLBuilder.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/Autoloader.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/DB.php",
+		"/C/xampp/htdocs/laravel/vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/Calculation/Database.php",
+		"/C/xampp/htdocs/laravel/vendor/composer/autoload_real.php",
+		"/C/xampp5.3/htdocs/sysstema/excel.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/clientes/admin_clientes.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/sedes/admin_sedes.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/agencias/admin_agencias.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/clientes/obtener_clientes_activados.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/sedes/obtener_sedes_activadas.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/agencias/obtener_agencias_activadas.php",
+		"/C/xampp5.3/htdocs/sysstema/vendor/spaguetti/excel.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/js/agencias_page.js",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/agencias/editar_agencia.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/agencias/insertar_agencia.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/comun/php/agencias/descargar_agencias.php",
+		"/C/xampp5.3/htdocs/sysstema/conf/php_definitions.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_asignar_montadores_controlador.php",
+		"/C/xampp5.3/htdocs/diff.diff",
+		"/C/xampp5.3/htdocs/test/index.html",
+		"/C/xampp5.3/htdocs/test/excel.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_solicitud_viaticos_comprobacion.php",
+		"/C/xampp5.3/htdocs/test/QueryBuilder/index.php",
+		"/C/xampp5.3/htdocs/sysstema/security.php",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/PHP.sublime-settings",
+		"/C/xampp5.3/htdocs/sysstema/ventas_modificar_solicitudes.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/Cell.php",
+		"/C/xampp5.3/htdocs/test/Helpers/ExcelHelper.php",
+		"/C/xampp5.3/htdocs/test/Helpers/CharHelper.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Examples/14excel5.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Examples/05featuredemo.inc.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/Worksheet.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/IOFactory.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Examples/14excel5.xls",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_datos_menu.php",
+		"/C/xampp5.3/htdocs/sysstema/vendor/spaguetti/DB.php",
+		"/C/xampp5.3/htdocs/nose.diff",
+		"/C/xampp5.3/htdocs/test/Helpers/HtmlHelper.php",
+		"/C/xampp5.3/htdocs/sysstema/images/static/modules/operaciones/php/oper_asignar_coordinador_en_solicitud.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_asignar_coordinadores.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_ordenes_evento_imprimir.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_ordenes_evento_imprimir_controlador.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_comprobacion_asignacion_externa_interna.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/operaciones/php/oper_registro_factura_detalles.php",
+		"/C/xampp5.3/htdocs/sysstema/static/modules/ventas/php/ventas_depositos.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/CachedObjectStorage/CacheBase.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/CachedObjectStorage/Memcache.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/CachedObjectStorage/ICache.php",
+		"/C/xampp5.3/htdocs/test/Excel/Cell.php",
+		"/C/xampp5.3/htdocs/test/Excel/Excel.php",
+		"/C/xampp5.3/htdocs/test/Excel/Sheet.php",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/TSB/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/C/xampp5.3/htdocs/test/Excel.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/Style/Color.php",
+		"/C/xampp5.3/htdocs/sysstema/adm_agencia.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Examples/05featuredemo.php",
+		"/C/xampp5.3/htdocs/test/PHPExcel/Classes/PHPExcel/Writer/Excel2007.php",
+		"/C/xampp5.3/htdocs/test/faisalman-simple-excel-php/src/SimpleExcel/SimpleExcel.php",
+		"/C/xampp5.3/htdocs/test/faisalman-simple-excel-php/src/SimpleExcel/Parser/XMLParser.php"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"C:\\xampp\\htdocs\\laravel",
+			"C:\\xampp5.3\\htdocs\\sysstema",
+			"C:\\xampp\\htdocs\\laravel",
+			"C:\\xampp5.3\\htdocs\\sysstema",
+			"C:\\xampp5.3\\htdocs\\test\\PHPExcel",
+			"C:\\xampp5.3\\htdocs\\test\\faisalman-simple-excel-php",
+			"C:\\xampp5.3\\htdocs\\test\\faisalman-simple-excel-php\\src\\SimpleExcel",
+			"C:\\Users\\TSB\\ruby\\Ojalabook",
+			"C:\\xampp\\htdocs\\laravel",
+			"C:\\xampp5.3\\htdocs\\sysstema",
+			"C:\\xampp\\htdocs\\laravel",
+			"C:\\xampp5.3\\htdocs\\sysstema",
+			"C:\\xampp\\htdocs\\laravel",
+			"C:\\xampp5.3\\htdocs\\sysstema",
+			"C:\\xampp5.3\\htdocs\\sysstema\\static\\modules\\comun\\php\\imprimir_pdf",
+			"C:\\xampp5.3\\htdocs\\sysstema",
+			"C:\\xampp\\htdocs\\sysstema",
+			"C:\\Users\\TSB\\Desktop\\YAKO\\BVB-PACR\\Programacion avanzada con Ruby\\Archivos Base",
+			"C:\\xampp\\htdocs\\sysstema",
+			"C:\\xampp\\htdocs\\php-activerecord",
+			"C:\\xampp\\htdocs\\laravel",
+			"C:\\xampp\\htdocs\\sysstema",
+			"C:\\Users\\TSB\\ruby\\blog",
+			"C:\\xampp\\htdocs\\sysstema\\static\\modules\\ventas\\php",
+			"C:\\xampp\\htdocs\\sysstema",
+			"C:\\xampp\\htdocs\\sysstema_relese",
+			"C:\\xampp\\htdocs\\sysstema_relese\\static\\modules\\asisdir",
+			"C:\\xampp\\htdocs\\sysstema_relese\\static\\modules\\asisdir\\php",
+			"C:\\xampp\\htdocs\\sysstema_relese",
+			"C:\\xampp\\htdocs\\sysstema_relese\\static\\modules\\ventas",
+			"C:\\xampp\\htdocs\\sysstema_relese",
+			"C:\\xampp\\htdocs\\Pruebas\\sysstema_relese"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cambio_divisa",
+			"`",
+			"tablaresumen2_valor_hotel_agencia",
+			"comision_pronosticada",
+			"Comisión Pronosticada",
+			"data_costeo",
+			"Total Sarao Rent",
+			"array_get",
+			"cumul_precio_venta_antes_iva_total",
+			"cumul_precio_venta_salida_total",
+			"$id_evento",
+			"id_evento",
+			"cumul_precio_venta_comisionable_total",
+			"Precio Venta",
+			"	Precio Venta",
+			"solicitudes",
+			"table_costeo_familias",
+			"case 1131",
+			"\\",
+			"createConnection",
+			"n colu",
+			"planillas.php",
+			"contrato_completo.php",
+			"class_imprimir.php",
+			"/Query.php",
+			"activa_desactiva_Agencia",
+			"btn_agencia_activados",
+			"id",
+			"JOIN (SELECT",
+			"FROM ( SELECT",
+			"FROM (SELECT",
+			"FROM (",
+			"depe_montador_select",
+			"rectificaListaMontadoresSolicitud",
+			"Ups! Ocurrio problemas en la comprobaci",
+			"Ups! Ocurrio problemas en la comprobación de las lista de los montadores.",
+			"n setFetchMode(",
+			"n select(",
+			"v_modulo_permitido[",
+			"cambio_divisa[",
+			"cambio_divisa",
+			"modulo_permitido",
+			"cambio_sugerido",
+			"php_functions",
+			"mysql_error",
+			"menu_mostrado",
+			"GridSimple",
+			"class ",
+			"ventas_modificar_solicitudes.php",
+			"SpryTabbed",
+			"SpryTabbedPanels",
+			"mysql.php",
+			"v_obtener_ordenes_servicios_vacias_prod",
+			"v_tipo_accesorio_accesorio",
+			"FROM new_view",
+			"new_view",
+			"end",
+			"excel_coordinates",
+			"ope_asi",
+			"get_columns",
+			"actualizarListaMontadoresEnSolicitud",
+			"depe_montador_select",
+			"cant_soli_montadores",
+			"solicitud_id",
+			"rectificaListaMontadoresSolicitud",
+			"Ocurrio problemas en la comprobaci",
+			"Ocurrio problemas en la comprobación de las lista de los montadores.",
+			"Oops",
+			"coordinador",
+			"table",
+			"AGUSTIN",
+			"get()",
+			"spaguetti",
+			"<strong>coordinador",
+			"btn_montadores",
+			"oper_asignar_coordinador",
+			"oper_registro_factura_detalles.php",
+			"oper_ordenes_evento_imprimir",
+			"solicitudes_sin_coordinador",
+			"Existen Solicitudes sin Coordinador",
+			"292",
+			"292 ",
+			"_cellCollection =",
+			"_currentObjectID =",
+			"n getCell",
+			"_currentObjectID",
+			"_currentObjectID =",
+			"_currentCell",
+			"_currentObjectID",
+			"n getCel",
+			"PHPExcel_CachedObjectStorage_",
+			"_cellCollection =",
+			"_cellCollection",
+			"export",
+			"\\*\\:*",
+			"\\*\\:\\*",
+			"\\*:*",
+			"A3",
+			"getFill",
+			"PHPExcel_Style_Fill",
+			"filename",
+			"name",
+			"on set",
+			"Terms and conditions",
+			"Worksheet",
+			"Spreadsheet",
+			"exportFile",
+			"csv",
+			"n value",
+			"->value",
+			"->first",
+			"insert_se",
+			"n colum",
+			"index.php",
+			"pdf",
+			"can :destroy, Comment do |comment|\n        #     comment.user == user\n        # end\n",
+			"You need to sign in or sign up before continuing.",
+			"Welcome! You have signed up successfully.",
+			"array",
+			"from",
+			"option",
+			"jobs",
+			"curso lar",
+			"http",
+			"https://mayako.github.io/",
+			"n __ca",
+			"class Connection",
+			"connection"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"</path>\n",
+			"', '",
+			", ",
+			"",
+			",\n",
+			"\n",
+			",\n",
+			"",
+			" = '',\n ",
+			"\n = '',",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 112.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 110.0
+	},
+	"pinned_build_system": "",
+	"project": "Spaguetti.sublime-project",
+	"replace":
+	{
+		"height": 90.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"jso",
+				"sysstema\\sftp-config.json"
+			],
+			[
+				"ventas_datos_evento_cargardatas",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_datos_evento_cargardatas.php"
+			],
+			[
+				"ventas_datos_evento_cargardatas_datos_genericos_template",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_datos_evento_cargardatas_datos_genericos_template.php"
+			],
+			[
+				"ventas_datos_evento_cargardatas_datos_genericos_access",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_datos_evento_cargardatas_datos_genericos_access.php"
+			],
+			[
+				"ventas_datos_evento",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_datos_evento.php"
+			],
+			[
+				"pre",
+				"sysstema\\static\\pre-index\\pre_index.php"
+			],
+			[
+				"class_imprimir",
+				"sysstema\\static\\modules\\comun\\php\\imprimir_pdf\\class_imprimir.php"
+			],
+			[
+				"contrato_propuesta",
+				"sysstema\\static\\modules\\comun\\php\\imprimir_pdf\\contrato_propuesta.php"
+			],
+			[
+				"planill",
+				"sysstema\\planillas.php"
+			],
+			[
+				"convers",
+				"sysstema\\static\\modules\\comun\\css\\notificaciones_usuarios\\conversaciones.css"
+			],
+			[
+				"php_functions.php",
+				"conf\\php_functions.php"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"json",
+				"sftp-config.json"
+			],
+			[
+				"connector.php",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php"
+			],
+			[
+				"laravelclassconnection",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\MySqlConnection.php"
+			],
+			[
+				"laravelclassdb",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\DB.php"
+			],
+			[
+				"classdb",
+				"test\\PHPExcel\\Classes\\PHPExcel\\Calculation\\Database.php"
+			],
+			[
+				"autoload_real",
+				"laravel\\vendor\\composer\\autoload_real.php"
+			],
+			[
+				"obtener_sedes_activadas",
+				"sysstema\\static\\modules\\comun\\php\\sedes\\obtener_sedes_activadas.php"
+			],
+			[
+				"admin_sedes",
+				"sysstema\\static\\modules\\comun\\php\\sedes\\admin_sedes.php"
+			],
+			[
+				"obtener_clientes_activados",
+				"sysstema\\static\\modules\\comun\\php\\clientes\\obtener_clientes_activados.php"
+			],
+			[
+				"static/modules/comun/php/clientes/admin_clientes.php",
+				"sysstema\\static\\modules\\comun\\php\\clientes\\admin_clientes.php"
+			],
+			[
+				"agencias_page",
+				"sysstema\\static\\modules\\comun\\js\\agencias_page.js"
+			],
+			[
+				"editar_agencia",
+				"sysstema\\static\\modules\\comun\\php\\agencias\\editar_agencia.php"
+			],
+			[
+				"insertar_agencia",
+				"sysstema\\static\\modules\\comun\\php\\agencias\\insertar_agencia.php"
+			],
+			[
+				"plan",
+				"sysstema\\planillas.php"
+			],
+			[
+				"pre_index.php",
+				"sysstema\\static\\pre-index\\pre_index.php"
+			],
+			[
+				"class.bd.php",
+				"sysstema\\class\\class.bd.php"
+			],
+			[
+				"obtener_agencias_activadas.php",
+				"sysstema\\static\\modules\\comun\\php\\agencias\\obtener_agencias_activadas.php"
+			],
+			[
+				"admin_agencias.php",
+				"sysstema\\static\\modules\\comun\\php\\agencias\\admin_agencias.php"
+			],
+			[
+				"pre_",
+				"sysstema\\static\\pre-index\\pre_index.php"
+			],
+			[
+				"oper_asignar_montadores_controlador",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_asignar_montadores_controlador.php"
+			],
+			[
+				"oper_asignar_montadores_controlador.php",
+				"static\\modules\\operaciones\\php\\oper_asignar_montadores_controlador.php"
+			],
+			[
+				"oper_solicitud_viaticos_comprobacion.php",
+				"static\\modules\\operaciones\\php\\oper_solicitud_viaticos_comprobacion.php"
+			],
+			[
+				"php_functions",
+				"sysstema\\conf\\php_functions.php"
+			],
+			[
+				"security",
+				"sysstema\\security.php"
+			],
+			[
+				"pre_index",
+				"sysstema\\static\\pre-index\\pre_index.php"
+			],
+			[
+				"ventas_modificar_solicitudes.php",
+				"sysstema\\ventas_modificar_solicitudes.php"
+			],
+			[
+				"05featuredemo.inc.php",
+				"PHPExcel\\Examples\\05featuredemo.inc.php"
+			],
+			[
+				"iofactory",
+				"PHPExcel\\Classes\\PHPExcel\\IOFactory.php"
+			],
+			[
+				"oper_datos_menu",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_datos_menu.php"
+			],
+			[
+				"oper_solicitud_viaticos_comprobacion",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_solicitud_viaticos_comprobacion.php"
+			],
+			[
+				"coordinador",
+				"sysstema\\images\\static\\modules\\operaciones\\php\\oper_asignar_coordinador_en_solicitud.php"
+			],
+			[
+				"oper_comprobacion_asignacion_externa_interna",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_comprobacion_asignacion_externa_interna.php"
+			],
+			[
+				"oper_ordenes_evento_imprimir",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_ordenes_evento_imprimir.php"
+			],
+			[
+				"planillas",
+				"sysstema\\planillas.php"
+			],
+			[
+				"oper_registro_factura_detalles",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_registro_factura_detalles.php"
+			],
+			[
+				"depos",
+				"static\\modules\\ventas\\php\\ventas_depositos.php"
+			],
+			[
+				"cell.",
+				"test\\PHPExcel\\Classes\\PHPExcel\\Cell.php"
+			],
+			[
+				"wor",
+				"test\\PHPExcel\\Classes\\PHPExcel\\Worksheet.php"
+			],
+			[
+				"worksheet.php",
+				"test\\PHPExcel\\Classes\\PHPExcel\\Worksheet.php"
+			],
+			[
+				"05featuredemo",
+				"test\\PHPExcel\\Examples\\05featuredemo.inc.php"
+			],
+			[
+				"auto",
+				"autoload.php"
+			],
+			[
+				"ventas_depo",
+				"static\\modules\\ventas\\php\\ventas_depositos.php"
+			],
+			[
+				"ventas_",
+				"static\\modules\\ventas\\php\\ventas_api.php"
+			],
+			[
+				"about.html",
+				"app\\views\\about.html"
+			],
+			[
+				"depo",
+				"static\\modules\\ventas\\php\\ventas_depositos.php"
+			],
+			[
+				"ventas_modificar_gestion_paquetes.php",
+				"static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes.php"
+			],
+			[
+				"ventas_modificar_gestion_adeudum.php",
+				"static\\modules\\ventas\\php\\ventas_modificar_gestion_adeudum.php"
+			],
+			[
+				"static/modules/ventas/php/ventas_modificar_datos_basicos_evento.php",
+				"static\\modules\\ventas\\php\\ventas_modificar_datos_basicos_evento.php"
+			],
+			[
+				"static/modules/comun/php/imprimir_pdf/class_imprimir.php",
+				"static\\modules\\comun\\php\\imprimir_pdf\\class_imprimir.php"
+			],
+			[
+				"clas",
+				"class\\class.bd.php"
+			],
+			[
+				"builder",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php"
+			],
+			[
+				"ventas_modificar_datos_solicitudes_evento.php",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_solicitudes_evento.php"
+			],
+			[
+				"ventas_modificar_datos_basicos_evento.php",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_basicos_evento.php"
+			],
+			[
+				"ventas_api",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_api.php"
+			],
+			[
+				"server",
+				"sysstema\\test\\server.php"
+			],
+			[
+				"serve",
+				"laravel\\server.php"
+			],
+			[
+				"deposi",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_depositos.php"
+			],
+			[
+				"ventas_modificar_gestion_adeudum",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_adeudum.php"
+			],
+			[
+				"ventas_modificar_gestion_paquetes",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes.php"
+			],
+			[
+				"ventas_modificar_datos_solicitudes_evento",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_solicitudes_evento.php"
+			],
+			[
+				"ventas_modificar_datos_basicos_evento",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_basicos_evento.php"
+			],
+			[
+				"ventas_modificar_datos_solicitudes_evento_cargar_data",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_solicitudes_evento_cargar_data.php"
+			],
+			[
+				"ventas_modificar_datos_solicitudes_evento_cargar_accesorios",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_solicitudes_evento_cargar_accesorios.php"
+			],
+			[
+				"ventas_modificar_datos_basicos_evento_cargar_data",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_basicos_evento_cargar_data.php"
+			],
+			[
+				"ventas_modificar_datos_basicos_evento_controlador",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_datos_basicos_evento_controlador.php"
+			],
+			[
+				"pre_in",
+				"sysstema\\static\\pre-index\\pre_index.php"
+			],
+			[
+				"php_send_mail.php",
+				"sysstema\\php_send_mail.php"
+			],
+			[
+				"model",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php"
+			],
+			[
+				"/illuminate/database/connection",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php"
+			],
+			[
+				"/illuminate/contracts/foundation/application",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Foundation\\Application.php"
+			],
+			[
+				"facade/db",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\DB.php"
+			],
+			[
+				"illuminate/support/facades/fa",
+				"laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php"
+			],
+			[
+				"correo_personalizado",
+				"static\\modules\\ventas\\js\\correo_personalizado.js"
+			],
+			[
+				"ventas_correo_cliente_personalizado.php",
+				"static\\modules\\ventas\\php\\ventas_correo_cliente_personalizado.php"
+			],
+			[
+				"pre_i",
+				"static\\pre-index\\pre_index.php"
+			],
+			[
+				"ventas_correo_cliente_personalizado_controlador.php",
+				"static\\modules\\ventas\\php\\ventas_correo_cliente_personalizado_controlador.php"
+			],
+			[
+				"ventas_correo_cliente_personalizado",
+				"static\\modules\\ventas\\php\\ventas_correo_cliente_personalizado.php"
+			],
+			[
+				"orden_servicio_cargar_rubros.php",
+				"sysstema\\static\\modules\\comun\\php\\asignacion_proveedores\\orden_servicio_cargar_rubros.php"
+			],
+			[
+				"send",
+				"sysstema\\static\\common\\resources\\php\\send_receive_mail\\send_email_contact.php"
+			],
+			[
+				"send_",
+				"sysstema\\php_send_mail.php"
+			],
+			[
+				"entas_datos_menu.php",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_datos_menu.php"
+			],
+			[
+				"paquetes_nuevo",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes_nuevo_paquete_guardar.php"
+			],
+			[
+				"bd.",
+				"sysstema\\class\\class.bd.php"
+			],
+			[
+				"static/modules/ventas/php/ventas_duplicar_evento_controlador.php",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_controlador.php"
+			],
+			[
+				"ventas_datos_solicitudes_cargardatas",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_datos_solicitudes_cargardatas.php"
+			],
+			[
+				"ftpjson",
+				"sysstema\\sftp-config.json"
+			],
+			[
+				"oper_datos_evento",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_datos_evento.php"
+			],
+			[
+				"ventas_modificar_gestion_adeudum_guardar",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_adeudum_guardar.php"
+			],
+			[
+				"adeudu",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_adeudum_guardar.php"
+			],
+			[
+				"clasbd",
+				"sysstema\\class\\class.bd.php"
+			],
+			[
+				"oper_asignar_montadores",
+				"sysstema\\static\\modules\\operaciones\\php\\oper_asignar_montadores.php"
+			],
+			[
+				"ventas_du",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_controlador.php.bak"
+			],
+			[
+				"ventas_d",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_controlador.php"
+			],
+			[
+				"ventas_modificar_gestion_paquetes_nuevo_paquete_guardar",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes_nuevo_paquete_guardar.php"
+			],
+			[
+				"duplic",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_controlador.php"
+			],
+			[
+				"class.bd",
+				"sysstema\\class\\class.bd.php"
+			],
+			[
+				"classbd",
+				"sysstema\\class\\class.bd.php"
+			],
+			[
+				"ventas_duplicar_evento_controlador",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_controlador.php"
+			],
+			[
+				"ventas_duplicar_evento_llamadas",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_llamadas.php"
+			],
+			[
+				"ventas_duplicar_evento",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento.php"
+			],
+			[
+				"ventas_duplicar_evento_llamadas.php",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_llamadas.php"
+			],
+			[
+				"clas.db",
+				"sysstema\\class\\class.bd.php"
+			],
+			[
+				"duplicar",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_duplicar_evento_controlador.php"
+			],
+			[
+				"ventas_modificar_gestion_paquetes_modificar",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes_modificar.php"
+			],
+			[
+				"ventas_modificar_gestion_paquetes_eliminar.php",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes_eliminar.php"
+			],
+			[
+				"ventas_modificar_gestion_paquetes_cargar_data",
+				"sysstema\\static\\modules\\ventas\\php\\ventas_modificar_gestion_paquetes_cargar_data.php"
+			],
+			[
+				"change",
+				"sysstema\\static\\modules\\comun\\js\\change_state.js"
+			],
+			[
+				"ventas_modificar_gestion_adeudum_guardar.php",
+				"static\\modules\\ventas\\php\\ventas_modificar_gestion_adeudum_guardar.php"
+			],
+			[
+				"class.",
+				"class\\class.bd.php"
+			],
+			[
+				"cambiar_de_estado_evento.php",
+				"static\\modules\\comun\\php\\cambiar_de_estado_evento.php"
+			],
+			[
+				"ventas_notas_historial_estados_evento.php",
+				"static\\modules\\ventas\\php\\ventas_notas_historial_estados_evento.php"
+			],
+			[
+				"ventas_notas_",
+				"static\\modules\\ventas\\php\\ventas_notas_historial_estados_evento.php"
+			],
+			[
+				"ventas_notas_historial_estados_evento",
+				"static\\modules\\ventas\\php\\ventas_notas_historial_estados_evento.php"
+			],
+			[
+				"ventas_datos_menu.php",
+				"static\\modules\\ventas\\php\\ventas_datos_menu.php"
+			],
+			[
+				"change_state",
+				"static\\modules\\comun\\js\\change_state.js"
+			],
+			[
+				"ventas_notas_historial_estados_evento_controlador",
+				"static\\modules\\ventas\\php\\ventas_notas_historial_estados_evento_controlador.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Program Files\\Sublime Text 3\\sysstema.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

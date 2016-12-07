@@ -97,16 +97,32 @@ function array_first(array $array, $callback = null, $flag = ARRAY_FIRST_USE_BOT
  * @param  mixed $key
  * @return mixed
  */
-function array_take(array &$arr, $key)
+function array_take(array &$array, $key)
 {
-    if (!isset($arr[$key])) {
+    if (!isset($array[$key])) {
         return false;
     }
 
-    $value = $arr[$key];
-    unset($arr[$key]);
+    $value = $array[$key];
+    unset($array[$key]);
 
     return $value;
+}
+
+/**
+ * Get an element of an array
+ * @param  array  $array
+ * @param  mixed $key
+ * @param  mixed $default
+ * @return mixed
+ */
+function array_get(array $array, $key, $default = false)
+{
+    if (empty($array[$key])) {
+        return $default;
+    }
+
+    return $array[$key];
 }
 
 /**
