@@ -37,9 +37,21 @@ class Database
 
     /**
      * Fetch mode
-     * @var int
+     * @var array
      */
-    public $fetch_mode;
+    public $fetch_mode = array();
+
+    private $fetch_mode_options = array(
+        'assoc' => PDO::FETCH_ASSOC,
+        'both'  => PDO::FETCH_BOTH,
+        'bound' => PDO::FETCH_BOUND,
+        'class' => PDO::FETCH_CLASS,
+        'into'  => PDO::FETCH_INTO,
+        'lazy'  => PDO::FETCH_LAZY,
+        'named' => PDO::FETCH_NAMED,
+        'num'   => PDO::FETCH_NUM,
+        'obj'   => PDO::FETCH_OBJ
+    );
 
     /**
      * Create a new query builder instance.
@@ -47,7 +59,7 @@ class Database
      */
     public function __construct()
     {
-        $this->fetch_mode = PDO::FETCH_OBJ;
+        $this->fetch_as(Database\Connection::get_instance()->get_fetch_mode());
     }
 
     /**
@@ -80,27 +92,22 @@ class Database
         return $that;
     }
 
-    public function as_assoc()
-    {
-        $this->fetch_mode = PDO::FETCH_ASSOC;
-        return $this;
-    }
-
     public function all()
     {
-        $stmt = Database\Connection::get_instance()->get_pdo()->prepare($this->sql);
+        $stmt = Database\Connection::get_instance()->get_pdo()->prepare($this->to_sql());
 
-        $stmt->setFetchMode($this->fetch_mode);
+        $stmt->setFetchMode($this->get_fetch_mode());
 
         $stmt->execute($this->binds);
 
         return $stmt->fetchAll();
     }
 
-    public function one(){
-        $stmt = Database\Connection::get_instance()->get_pdo()->prepare($this->sql);
+    public function one()
+    {
+        $stmt = Database\Connection::get_instance()->get_pdo()->prepare($this->to_sql());
 
-        $stmt->setFetchMode($this->fetch_mode);
+        $stmt->setFetchMode($this->get_fetch_mode());
 
         $stmt->execute($this->binds);
 
@@ -112,6 +119,37 @@ class Database
         $rows = $this->all();
 
         return array_map($callback, $rows);
+    }
+
+
+    # FETCHING MODE
+    public function as_assoc()
+    {
+        $this->fetch_as('assoc');
+        return $this;
+    }
+
+    public function as_object($classname = null)
+    {
+
+
+        $this->fetch_as('obj');
+    }
+
+    public function get_fetch_mode()
+    {
+        return $this->fetch_mode;
+    }
+
+    public function fecth_as($mode, $colno_or_classname_or_object = null, array $ctorargs = array())
+    {
+        if (is_string($mode)) {
+            if (!$mode = array_get($this->fetch_mode_options, $mode)) {
+                throw new Exception("Fetch mode option doesnot valid");
+            }
+        }
+
+        $this->fetch_mode = $mode;
     }
 
     public function to_sql()

@@ -127,6 +127,15 @@ final class Connection
     }
 
     /**
+     * Get fetch mode
+     * @return int
+     */
+    public function get_fetch_mode()
+    {
+        return @self::$config['options'][PDO::ATTR_DEFAULT_FETCH_MODE];
+    }
+
+    /**
      * Set the option MYSQL_ATTR_INIT_COMMAND to old PHP versions
      */
     private function set_charset()

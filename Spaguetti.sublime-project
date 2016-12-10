@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "C:\\xampp5.3\\htdocs\\test"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\laravel"
 		}
 	]
 }
