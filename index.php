@@ -2,17 +2,20 @@
 
 require 'Spaguetti.php';
 
+class User {
+    public $name;
 
-Database::connect_to('localhost', 'test', 'root');
+    function __construct(){
+        static $i = 1;
+        echo 'Setteando '.$i;
+        echo '<br>';
+        $this->name = 'YOLO';
+        $i++;
+    }
+}
 
-// $users = Database::query('SELECT * FROM users')->as_assoc()->fetch(function($user){
-//     $user['name'] = strtoupper($user['name']);
-//     return $user;
-// });
+$users = Database::query('SELECT * FROM empty')->one();
 
 
-
-$users = Database::query('SELECT * FROM users')->to_sql();
-
-
-echo $users;
+var_dump($users);
+exit();

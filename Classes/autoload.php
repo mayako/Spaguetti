@@ -13,6 +13,8 @@ if (!function_exists('__autoload')) {
                 . str_replace('\\', DIRECTORY_SEPARATOR, $class)
                 . '.php';
 
+        // echo $filename;
+        // echo '<br>';
         if (!file_exists($filename) && !is_readable($filename)) {
             return false;
         }

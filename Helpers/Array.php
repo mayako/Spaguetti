@@ -7,7 +7,7 @@
  */
 function is_multiple(array $array)
 {
-    return (bool) array_first($array, 'is_array', ARRAY_FIRST_USE_VALUE);
+    return Arr::is_multiple($array);
 }
 
 /**
@@ -17,7 +17,7 @@ function is_multiple(array $array)
  */
 function is_assoc(array $array)
 {
-    return (bool) array_first($array, 'is_string', ARRAY_FIRST_USE_KEY);
+    return Arr::is_assoc($array);
 }
 
 /**
@@ -53,42 +53,13 @@ function array_values_recursive(array $array)
  * @param  Closure $callback
  * @return mixed
  */
-define('ARRAY_FIRST_USE_VALUE', 1);
-define('ARRAY_FIRST_USE_KEY', 2);
-define('ARRAY_FIRST_USE_BOTH', 3);
-define('ARRAY_FIRST_USE_BOTH_INVERSE', 4);
+// define('ARRAY_FIRST_USE_VALUE', 1);
+// define('ARRAY_FIRST_USE_KEY', 2);
+// define('ARRAY_FIRST_USE_BOTH', 3);
+// define('ARRAY_FIRST_USE_BOTH_INVERSE', 4);
 function array_first(array $array, $callback = null, $flag = ARRAY_FIRST_USE_BOTH)
 {
-    if (!$callback) {
-        return reset($array);
-    }
-
-    foreach ($array as $key => $value) {
-
-        switch ($flag) {
-            case ARRAY_FIRST_USE_VALUE:
-                $bool = call_user_func($callback, $value);
-                break;
-
-            case ARRAY_FIRST_USE_KEY:
-                $bool = call_user_func($callback, $key);
-                break;
-
-            case ARRAY_FIRST_USE_BOTH_INVERSE:
-                $bool = call_user_func($callback, $key, $value);
-                break;
-
-            default:
-                $bool = call_user_func($callback, $value, $key);
-                break;
-        }
-
-        if ($bool) {
-            return $value;
-        }
-    }
-
-    return;
+    return Arr::first($array, $callback, $flag);
 }
 
 /**
