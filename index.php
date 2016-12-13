@@ -14,7 +14,7 @@ class User {
     }
 }
 
-$users = Database::query('SELECT * FROM empty')->one();
+$users = Database::select_sql('SELECT * FROM users')->all();
 
 
 var_dump($users);

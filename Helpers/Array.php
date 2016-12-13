@@ -7,7 +7,7 @@
  */
 function is_multiple(array $array)
 {
-    return Arr::is_multiple($array);
+    return (bool) array_first($array, 'is_array', ARRAY_FIRST_USE_VALUE);
 }
 
 /**
@@ -17,7 +17,7 @@ function is_multiple(array $array)
  */
 function is_assoc(array $array)
 {
-    return Arr::is_assoc($array);
+    return (bool) array_first($array, 'is_string', ARRAY_FIRST_USE_KEY);
 }
 
 /**
@@ -53,13 +53,42 @@ function array_values_recursive(array $array)
  * @param  Closure $callback
  * @return mixed
  */
-// define('ARRAY_FIRST_USE_VALUE', 1);
-// define('ARRAY_FIRST_USE_KEY', 2);
-// define('ARRAY_FIRST_USE_BOTH', 3);
-// define('ARRAY_FIRST_USE_BOTH_INVERSE', 4);
+define('ARRAY_FIRST_USE_VALUE', 1);
+define('ARRAY_FIRST_USE_KEY', 2);
+define('ARRAY_FIRST_USE_BOTH', 3);
+define('ARRAY_FIRST_USE_BOTH_INVERSE', 4);
 function array_first(array $array, $callback = null, $flag = ARRAY_FIRST_USE_BOTH)
 {
-    return Arr::first($array, $callback, $flag);
+    if (!$callback) {
+        return reset($array);
+    }
+
+    foreach ($array as $key => $value) {
+
+        switch ($flag) {
+            case ARRAY_FIRST_USE_VALUE:
+                $bool = call_user_func($callback, $value);
+                break;
+
+            case ARRAY_FIRST_USE_KEY:
+                $bool = call_user_func($callback, $key);
+                break;
+
+            case ARRAY_FIRST_USE_BOTH_INVERSE:
+                $bool = call_user_func($callback, $key, $value);
+                break;
+
+            default:
+                $bool = call_user_func($callback, $value, $key);
+                break;
+        }
+
+        if ($bool) {
+            return $value;
+        }
+    }
+
+    return;
 }
 
 /**
@@ -173,11 +202,42 @@ function array_only(array $array, $keys)
 function array_rename_keys(array &$array, array $new_keys)
 {
     foreach ($new_keys as $old_key => $new_key) {
+
         if (isset($array[$old_key])) {
+
             $array[$new_key] = $array[$old_key];
+
             unset($array[$old_key]);
         }
     }
 
     return $array;
+}
+
+/**
+ * Group rows in array with keys based en string
+ * @param  array  $array
+ * @param  string $dot
+ * @return array
+ */
+function array_group(array $array, $dot)
+{
+    $rs = array();
+
+    foreach ($array as $value) {
+
+        $_value = (array) $value;
+
+        $exp = '$rs';
+
+        foreach (explode('.', $dot) as $node) {
+            $exp .= '['.$_value[$node].']';
+        }
+
+        $exp .= '[] = $value;';
+
+        eval($exp);
+    }
+
+    return $rs;
 }
