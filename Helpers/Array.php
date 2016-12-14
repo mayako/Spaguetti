@@ -7,7 +7,7 @@
  */
 function is_multiple(array $array)
 {
-    return (bool) array_first($array, 'is_array', ARRAY_FIRST_USE_VALUE);
+    return (bool) array_filter($array, 'is_array');
 }
 
 /**

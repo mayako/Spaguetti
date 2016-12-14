@@ -2,63 +2,17 @@
 
 class Database
 {
-    /**
-    * Database connection instance.
-    * @var Connection
-    */
-    private $connection;
-
-    /**
-    * SQL builder instance.
-    * @var SQLBuilder
-    */
-    private $builder;
-
-    /**
-     * SQL string to execute.
-     * @var string
-     */
-    private $sql;
-
-    /**
-    * Params to bind within query
-    * @var array
-    */
-    private $binds = array(
-        'select' => array(),
-        'update' => array(),
-        'join'   => array(),
-        'where'  => array(),
-        'having' => array()
+    public static $fetch_modes = array(
+        'assoc'      => PDO::FETCH_ASSOC,
+        'both'       => PDO::FETCH_BOTH,
+        'class'      => PDO::FETCH_CLASS,
+        'into'       => PDO::FETCH_INTO,
+        'lazy'       => PDO::FETCH_LAZY,
+        'named'      => PDO::FETCH_NAMED,
+        'num'        => PDO::FETCH_NUM,
+        'obj'        => PDO::FETCH_OBJ,
+        'props_late' => PDO::FETCH_PROPS_LATE
     );
-
-    /**
-     * Statement type.
-     * @var string
-     */
-    public $type = 'select';
-
-    /**
-     * Fetch mode
-     * @var array
-     */
-    private $fetch_mode;
-
-    /**
-     * Fetch mode Class
-     * @var string
-     */
-    private $fetch_class;
-
-    /**
-     * Create a new query builder instance.
-     * @param string $table
-     */
-    public function __construct()
-    {
-        $this->connection = Database\Connection::get_instance();
-        // $this->builder = new SQLBuilder();
-    }
 
     /**
      * Overwrite access to connect
@@ -67,7 +21,7 @@ class Database
      * @param  string $username
      * @param  string $password
      */
-    public static function connect_to($host, $database, $username, $password = '')
+    public function connect_to($host, $database, $username, $password = '')
     {
         return Database\Connection::to(array
             (
@@ -79,21 +33,83 @@ class Database
         );
     }
 
+    public function statement($query, array $binds = array())
+    {
+        return self::get_connection()->get_pdo()->prepare($query)->execute($binds);
+    }
+
     /**
      * Run a select statement.
      * @param  string $query
-     * @param  array  $bindings
+     * @param  array  $binds
      * @return array
      */
-    public static function select_sql($query, array $binds = array())
+    public function select($query, array $binds = array(), array $options = array())
     {
-        $that = new self();
+        return self::select_run($query, $binds, $options)->fetchAll();
+    }
 
-        $that->sql = $query;
+    /**
+     * Alias of select method
+     * @param  string $query
+     * @param  array  $binds
+     * @return array
+     */
+    public function select_all($query, array $binds = array(), array $options = array())
+    {
+        return self::select($query, $binds, $options);
+    }
 
-        $that->binds = $binds;
+    /**
+     * Run a select statement and return only one record.
+     * @param  string $query
+     * @param  array  $binds
+     * @return mixed
+     */
+    public function select_one($query, array $binds = array(), array $options = array())
+    {
+        return self::select_run($query, $binds, $options)->fetch() ?: null;
+    }
 
-        return $that;
+    /**
+     * Execute a select statement
+     * @param  string $query
+     * @param  array  $binds
+     * @param  array  $options
+     * @return PDOStatement
+     */
+    protected function select_run($query, array $binds = array(), array $options = array())
+    {
+        $stmt = self::get_connection()->get_pdo()->prepare($query);
+
+        self::set_fetch_mode($stmt, $options);
+
+        $stmt->execute($binds);
+
+        return $stmt;
+    }
+
+    /**
+     * Set the fetch mode
+     * @param PDOStatement $stmt
+     * @param array        $options
+     */
+    protected function set_fetch_mode(PDOStatement $stmt, array $options)
+    {
+        if (!($mode = array_get($options, 'as'))) {
+            return;
+        }
+
+        $modes = array(
+            'assoc' => PDO::FETCH_ASSOC,
+            'object' => PDO::FETCH_OBJ
+        );
+
+        if (!array_key_exists($mode, $modes)) {
+            throw new Exception("Fetch mode invalid, only accept 'assoc' or 'object'", 1);
+        }
+
+        $stmt->setFetchMode($modes[$mode]);
     }
 
     /**
@@ -102,13 +118,22 @@ class Database
      * @param  array  $binds
      * @return int
      */
-    public static function insert_sql($query, array $binds = array())
+    public function insert($query, array $binds = array())
     {
-        $that = new self();
+        return self::statement($query, $binds);
+    }
 
-        $that->connection->get_pdo()->prepare($query)->execute($binds);
+    /**
+     * Run an insert statement and return the id inserted.
+     * @param  string $query
+     * @param  array  $binds
+     * @return int
+     */
+    public function insert_get_id($query, array $binds = array())
+    {
+        self::insert($query, $bindings);
 
-        $id = $that->connection->get_pdo()->lastInsertId();
+        $id = self::get_connection()->get_pdo()->lastInsertId();
 
         return is_numeric($id) ? (int) $id : $id;
     }
@@ -119,11 +144,9 @@ class Database
      * @param  array  $binds
      * @return int
      */
-    public static function update_sql($query, array $binds = array())
+    public function update($query, array $binds = array())
     {
-        $that = new self();
-
-        return $that->affect_rows($query, $binds);
+        return self::affect_rows($query, $binds);
     }
 
     /**
@@ -132,11 +155,9 @@ class Database
      * @param  array  $binds
      * @return int
      */
-    public static function delete_sql($query, array $binds = array())
+    public function delete($query, array $binds = array())
     {
-        $that = new self();
-
-        return $that->affect_rows($query, $binds);
+        return self::affect_rows($query, $binds);
     }
 
     /**
@@ -147,7 +168,7 @@ class Database
      */
     protected function affect_rows($query, array $binds = array())
     {
-        $stmt = $this->connection->get_pdo()->prepare($query);
+        $stmt = self::get_connection()->get_pdo()->prepare($query);
 
         $stmt->execute($binds);
 
@@ -155,122 +176,105 @@ class Database
     }
 
     /**
-     * Return an array with all rows
-     * @return array
-     */
-    public function all()
-    {
-        return $this->run_select()->fetchAll() ?: null;
-    }
-
-    /**
-     * Return a row
+     * Run a SQL statement in a transaction.
+     * @param  Closure $callback
      * @return mixed
      */
-    public function one()
+    public function transaction(\Closure $callback)
     {
-        return $this->run_select()->fetch() ?: null;
+        $pdo = self::get_connection()->get_pdo();
+
+        $pdo->beginTransaction();
+
+        try {
+            $rs = $callback();
+
+            $pdo->commit();
+
+            return $rs;
+        }
+
+        catch (\Exception $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+
+            throw $e;
+        }
     }
 
     /**
-     * Fetch rows
-     * @param  callable $callback
+     * Initiates a transaction
+     * @return boolean
+     */
+    public function begin_transaction()
+    {
+        return self::get_connection()->get_pdo()->beginTransaction();
+    }
+
+    /**
+     * Commits a transaction
+     * @return boolean
+     */
+    public function commit()
+    {
+        return self::get_connection()->get_pdo()->commit();
+    }
+
+    /**
+     * Rolls back a transaction
+     * @return boolean
+     */
+    public function roll_back()
+    {
+        $pdo = self::get_connection()->get_pdo();
+
+        if ($pdo->inTransaction()) {
+            return $pdo->rollBack();
+        }
+
+        return true;
+    }
+
+    /**
+     * Create a new query instance.
+     * @param  mixed $table
+     * @return Query
+     */
+    public static function table($table)
+    {
+        $query = new Database\Query();
+
+        return $query->from($table);
+    }
+
+    /**
+     * Create a new query instance.
+     * @param  mixed $table
+     * @return Query
+     */
+    public function from($table)
+    {
+        return self::table($table);
+    }
+
+    /**
+     * Get a Connection instance
+     * @return Database/Connection
+     */
+    public static function get_connection()
+    {
+        return Database\Connection::get_instance();
+    }
+
+    /**
+     * It allows the static call.
+     * @param  string $method
+     * @param  array $args
      * @return mixed
      */
-    public function fetch($callback)
+    public static function __callStatic($method, $args)
     {
-        $rows = $this->all();
-
-        $result = array();
-
-        foreach ($rows as $row) {
-            $result[] = $callback($row);
-        }
-
-        return count($result) > 1 ? $result : reset($result);
-    }
-
-    /**
-     * Set fetch as array assiciative
-     * @return Database
-     */
-    public function as_assoc()
-    {
-        $this->fetch_mode = PDO::FETCH_ASSOC;
-        return $this;
-    }
-
-    /**
-     * Set fecth as object
-     * @param  string $classname
-     * @return Database
-     */
-    public function as_object($classname = null)
-    {
-        $this->fetch_mode = $classname ? PDO::FETCH_CLASS : PDO::FETCH_OBJ;
-
-        if ($classname) {
-            $this->fetch_class = $classname;
-        }
-
-        return $this;
-    }
-
-    /**
-     * Fet fetch mode
-     * @return int
-     */
-    public function get_fetch_mode()
-    {
-        return $this->fetch_mode ?: $this->connection->get_fetch_mode();
-    }
-
-    /**
-     * Get fetch class
-     * @return string
-     */
-    public function get_fetch_class() {
-        return $this->fetch_class;
-    }
-
-    /**
-     * Get SQL statement into string
-     * @return string
-     */
-    public function to_sql()
-    {
-        if ($this->sql == null) {
-            $this->sql = 'Contruccion de SQL (comming soon)';
-        }
-
-        return $this->sql;
-    }
-
-    /**
-     * Run a select query
-     * @return PDOStatement
-     */
-    protected function run_select()
-    {
-        $stmt = $this->connection->get_pdo()->prepare($this->to_sql());
-
-        if ($class = $this->get_fetch_class()) {
-            $stmt->setFetchMode($this->get_fetch_mode() | PDO::FETCH_PROPS_LATE, $class);
-        } else {
-            $stmt->setFetchMode($this->get_fetch_mode());
-        }
-
-        $stmt->execute($this->binds);
-
-        return $stmt;
-    }
-
-
-    /**
-     * Allows treat the object as a string
-     * @return string
-     */
-    public function __toString() {
-        return $this->to_sql();
+        return call_user_func_array(array(__CLASS__, $method), $args);
     }
 }
