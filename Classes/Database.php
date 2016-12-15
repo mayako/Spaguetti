@@ -2,18 +2,6 @@
 
 class Database
 {
-    public static $fetch_modes = array(
-        'assoc'      => PDO::FETCH_ASSOC,
-        'both'       => PDO::FETCH_BOTH,
-        'class'      => PDO::FETCH_CLASS,
-        'into'       => PDO::FETCH_INTO,
-        'lazy'       => PDO::FETCH_LAZY,
-        'named'      => PDO::FETCH_NAMED,
-        'num'        => PDO::FETCH_NUM,
-        'obj'        => PDO::FETCH_OBJ,
-        'props_late' => PDO::FETCH_PROPS_LATE
-    );
-
     /**
      * Overwrite access to connect
      * @param  string $host
@@ -241,7 +229,7 @@ class Database
      * @param  mixed $table
      * @return Query
      */
-    public static function table($table)
+    public function table($table)
     {
         $query = new Database\Query();
 
@@ -262,7 +250,7 @@ class Database
      * Get a Connection instance
      * @return Database/Connection
      */
-    public static function get_connection()
+    public function get_connection()
     {
         return Database\Connection::get_instance();
     }
