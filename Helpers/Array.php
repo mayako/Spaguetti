@@ -57,6 +57,7 @@ define('ARRAY_FIRST_USE_VALUE', 1);
 define('ARRAY_FIRST_USE_KEY', 2);
 define('ARRAY_FIRST_USE_BOTH', 3);
 define('ARRAY_FIRST_USE_BOTH_INVERSE', 4);
+
 function array_first(array $array, $callback = null, $flag = ARRAY_FIRST_USE_BOTH)
 {
     if (!$callback) {
