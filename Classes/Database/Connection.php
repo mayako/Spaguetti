@@ -84,7 +84,7 @@ final class Connection
             return $dsn;
         }
 
-        $dsn = array_except(self::$config, array('username', 'password', 'options'));
+        $dsn = array_except_keys(self::$config, array('username', 'password', 'options'));
 
         array_rename_keys($dsn, array('database' => 'dbname'));
 
@@ -125,15 +125,6 @@ final class Connection
     private function get_options()
     {
         return self::$config['options'];
-    }
-
-    /**
-     * Get fetch mode
-     * @return int
-     */
-    public function get_fetch_mode()
-    {
-        return @self::$config['options'][PDO::ATTR_DEFAULT_FETCH_MODE];
     }
 
     /**

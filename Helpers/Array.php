@@ -39,9 +39,9 @@ function array_map_with_keys(array $arr, $callback)
 function array_values_recursive(array $array)
 {
     $rs = array();
+    array_walk_recursive($array, function($value, $key) use (&$rs) {
 
-    array_walk_recursive($array, function($value) use (&$rs) {
-        $rs[] = $value;
+        $rs[$key] = $value;
     });
 
     return $rs;
@@ -173,14 +173,36 @@ function array_add(array &$arr, $value)
 }
 
 /**
+ * Return the original array excluding the values
+ * @param  array  $array
+ * @param  array  $values
+ * @return array
+ */
+function array_except(array $array, $values)
+{
+    return array_diff($array, $values);
+}
+
+/**
  * Return the original array excluding the keys
  * @param  array  $array
  * @param  array  $keys
  * @return array
  */
-function array_except(array $array, $keys)
+function array_except_keys(array $array, $keys)
 {
     return array_diff_key($array, array_flip((array) $keys));
+}
+
+/**
+ * Return only the values from the original array
+ * @param  array  $array
+ * @param  array  $values
+ * @return array
+ */
+function array_only(array $array, $values)
+{
+    return array_intersect($array, (array) $values);
 }
 
 /**
@@ -189,7 +211,7 @@ function array_except(array $array, $keys)
  * @param  array  $keys
  * @return array
  */
-function array_only(array $array, $keys)
+function array_only_keys(array $array, $keys)
 {
     return array_intersect_key($array, array_flip((array) $keys));
 }

@@ -17,6 +17,12 @@ class Query
     private $builder;
 
     /**
+     * Table instances
+     * @var array
+     */
+    private static $tables = array();
+
+    /**
     * Params to bind within query
     * @var array
     */
@@ -456,6 +462,32 @@ class Query
      */
     public function columns($columns = array('*'))
     {
+        return call_user_func_array(array($this,'select'), func_get_args());
+    }
+
+    /**
+     * Select only the columns from table.
+     * @param  mixed $columns
+     * @return Query
+     */
+    public function select_only($columns)
+    {
+        return call_user_func_array(array($this,'select'), func_get_args());
+    }
+
+    /**
+     * Select all column from table except those.
+     * @param  mixed $columns
+     * @return Query
+     */
+    public function select_except($columns)
+    {
+        $exceptions = is_array($columns) ? $columns : func_get_args();
+
+        $all_columns = $this->get_column_names();
+
+        $columns = array_except($all_columns, $exceptions);
+
         return $this->select($columns);
     }
 
@@ -822,11 +854,26 @@ class Query
     }
 
     /**
-     * Allows treat the object as a string
-     * @return string
+     * Get column names from table
+     * @return array
      */
-    public function __toString() {
-        return $this->to_sql();
+    public function get_column_names()
+    {
+        if (array_get(static::$tables, $this->from)) {
+            return static::$tables[$this->from]['columns'];
+        }
+
+        $database = $this->db->get_connection()->get_database();
+
+        $table = $this->from;
+
+        $query = new Query();
+        return $query->from('INFORMATION_SCHEMA.COLUMNS')
+            ->where(array(
+                'table_schema' => $database,
+                'table_name' => $table
+            ))
+            ->pluck('column_name');
     }
 
     /**
@@ -930,5 +977,13 @@ class Query
         $this->binds[$key] = array_merge($this->binds[$key],(array) $value);
 
         return $this->binds;
+    }
+
+    /**
+     * Allows treat the object as a string
+     * @return string
+     */
+    public function __toString() {
+        return $this->to_sql();
     }
 }
