@@ -279,7 +279,7 @@ function excel_table_from_array(PHPExcel_Worksheet $worksheet, array $values, $s
         $values = array($values);
     }
 
-    list ($start_column, $start_row) = PHPExcel_Cell::coordinateFromString($start_cell);
+    list($start_column, $start_row) = PHPExcel_Cell::coordinateFromString($start_cell);
 
 
     foreach ($values as $row_data) {

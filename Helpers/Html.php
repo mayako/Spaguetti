@@ -46,7 +46,7 @@ function boolean_tag_attribute($key)
 function style_tag_attribute($value)
 {
     if (is_array($value)) {
-        $value = implode('', array_map_keys($value, function($value, $key){
+        $value = implode('', array_map_with_keys($value, function($value, $key){
             return "$key:$value;";
         }));
     }
@@ -201,7 +201,7 @@ function select_tag($name, $options, array $attributes = array())
  */
 function options_for_select(array $options, $selected = null, $disabled = null)
 {
-    return implode('', array_map_keys($options, function($value, $key) use($selected, $disabled){
+    return implode('', array_map_with_keys($options, function($value, $key) use($selected, $disabled){
         $attributes = array();
 
         $attributes['selected'] = !is_null($selected) && in_array($key, (array) $selected);
@@ -221,7 +221,7 @@ function options_for_select(array $options, $selected = null, $disabled = null)
  */
 function grouped_options_for_select(array $options, $selected = null, $disabled = null)
 {
-    return implode('', array_map_keys($options, function($options, $label) use($selected, $disabled){
+    return implode('', array_map_with_keys($options, function($options, $label) use($selected, $disabled){
         $attributes = array();
 
         $attributes['label'] = $label;

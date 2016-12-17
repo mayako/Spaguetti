@@ -829,7 +829,11 @@ class Query
     {
         $columns = ($key == null) ? array($column) : array($column, $key);
 
-        $rs = $this->select($columns)->execute();
+        if (!$this->columns) {
+            $this->select($columns);
+        }
+
+        $rs = $this->execute();
 
         $column = $this->column_basename($column);
         $key    = $this->column_basename($key) ?: $key;

@@ -63,7 +63,7 @@ class SQLBuilder
 
         }
 
-        return strtolower(implode(' ', $sql));
+        return implode(' ', $sql);
     }
 
     /**
@@ -351,7 +351,7 @@ class SQLBuilder
     {
         $columns = array_fill_keys(array_keys($row), '?');
 
-        return 'set '.implode(',', array_map_keys($columns, function($value, $column) {
+        return 'set '.implode(',', array_map_with_keys($columns, function($value, $column) {
             return $column.' = '.$value;
         }));
     }
