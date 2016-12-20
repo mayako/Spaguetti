@@ -32,18 +32,37 @@ function array_map_with_keys(array $arr, $callback)
 }
 
 /**
+ * Get all values of an array recursively keeping keys
+ * @param  array  $arr
+ * @return array
+ */
+function array_values_recursive_with_keys(array $array)
+{
+    $rs = array();
+    array_walk_recursive($array, function($value, $key) use (&$rs) {
+        $rs[$key] = $value;
+    });
+
+    return $rs;
+}
+
+/**
  * Get all values of an array recursively
  * @param  array  $arr
  * @return array
  */
-function array_values_recursive(array $array)
+function array_values_recursive($array)
 {
     $rs = array();
-    array_walk_recursive($array, function($value, $key) use (&$rs) {
 
-        $rs[$key] = $value;
-    });
-
+    foreach($array as $key => $value) {
+        if (is_array($value)) {
+            $rs = array_merge($rs, array_values_recursive($value));
+        }
+        else {
+            $rs[$key] = $value;
+        }
+    }
     return $rs;
 }
 
@@ -134,7 +153,8 @@ function array_get(array $array, $key, $default = false)
  * @param  bool $collapse
  * @return array
  */
-function array_list(array $arr, $value, $key = null, $collapse = false) {
+function array_pluck(array $arr, $value, $key = null, $collapse = false)
+{
     $rows = array();
     foreach ($arr as $row) {
         $row = (array) $row;

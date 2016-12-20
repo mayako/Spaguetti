@@ -133,7 +133,7 @@ class Query
      */
     public function select($columns = array('*'))
     {
-        $this->columns = is_array($columns) ? $columns : func_get_args();
+        $this->columns = array_values_recursive(func_get_args());
         return $this;
     }
 
@@ -271,7 +271,7 @@ class Query
      */
     public function group($columns)
     {
-        $columns = is_array($columns) ? $columns : func_get_args();
+        $columns = array_values_recursive(func_get_args());
 
         $this->group = array_merge((array) $this->group, $columns);
 
@@ -347,7 +347,7 @@ class Query
 
         $this->columns = array_keys(reset($this->rows));
 
-        $this->set_binds(array_values_recursive($rows));
+        $this->set_binds(array_values_recursive_with_keys($rows));
 
         return $this;
     }
@@ -482,7 +482,7 @@ class Query
      */
     public function select_except($columns)
     {
-        $exceptions = is_array($columns) ? $columns : func_get_args();
+        $exceptions = array_values_recursive(func_get_args());
 
         $all_columns = $this->get_column_names();
 
@@ -838,7 +838,7 @@ class Query
         $column = $this->column_basename($column);
         $key    = $this->column_basename($key) ?: $key;
 
-        return array_list($rs, $column, $key, $collapse);
+        return array_pluck($rs, $column, $key, $collapse);
     }
 
     ######################################################
@@ -948,7 +948,7 @@ class Query
      */
     public function get_binds_values()
     {
-        return array_values_recursive($this->binds);
+        return array_values_recursive_with_keys($this->binds);
     }
 
     /**
