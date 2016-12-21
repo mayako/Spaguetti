@@ -55,12 +55,12 @@ function array_values_recursive($array)
 {
     $rs = array();
 
-    foreach($array as $key => $value) {
+    foreach($array as $value) {
         if (is_array($value)) {
             $rs = array_merge($rs, array_values_recursive($value));
         }
         else {
-            $rs[$key] = $value;
+            $rs[] = $value;
         }
     }
     return $rs;
