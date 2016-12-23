@@ -901,6 +901,31 @@ class Query
     }
 
     /**
+     * Verify if a table is joined
+     * @param  string  $table
+     * @return boolean
+     */
+    public function is_joined($table)
+    {
+        return in_array($table, array_pluck($this->join, 'table'));
+    }
+
+    /**
+     * Add a column to select
+     * @param mixed $columns
+     */
+    public function add_select($columns)
+    {
+        if ($this->columns) {
+            array_add($this->columns, $columns);
+        } else {
+            $this->select($columns);
+        }
+
+        return $this;
+    }
+
+    /**
      * Reset all binds list
      * @param  string $key
      * @return array
