@@ -119,7 +119,7 @@ class Database
      */
     public function insert_get_id($query, array $binds = array())
     {
-        self::insert($query, $bindings);
+        self::insert($query, $binds);
 
         $id = self::get_connection()->get_pdo()->lastInsertId();
 

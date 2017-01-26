@@ -347,7 +347,7 @@ class Query
 
         $this->columns = array_keys(reset($this->rows));
 
-        $this->set_binds(array_values_recursive_with_keys($rows));
+        $this->set_binds(array_values_recursive($rows));
 
         return $this;
     }

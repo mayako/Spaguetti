@@ -1,0 +1,26 @@
+diff --git a/Classes/Database.php b/Classes/Database.php
+index 6667a3d..83c5011 100644
+--- a/Classes/Database.php
++++ b/Classes/Database.php
+@@ -119,7 +119,7 @@ class Database
+      */
+     public function insert_get_id($query, array $binds = array())
+     {
+-        self::insert($query, $bindings);
++        self::insert($query, $binds);
+ 
+         $id = self::get_connection()->get_pdo()->lastInsertId();
+ 
+diff --git a/Classes/Database/Query.php b/Classes/Database/Query.php
+index d9386c1..4c44b4a 100644
+--- a/Classes/Database/Query.php
++++ b/Classes/Database/Query.php
+@@ -347,7 +347,7 @@ class Query
+ 
+         $this->columns = array_keys(reset($this->rows));
+ 
+-        $this->set_binds(array_values_recursive_with_keys($rows));
++        $this->set_binds(array_values_recursive($rows));
+ 
+         return $this;
+     }
