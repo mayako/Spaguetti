@@ -2,8 +2,15 @@
     "name": "mayako/spaguetti",
     "description": "Help Framework",
     "type": "library",
-    "require": {
+    "require-dev": {
         "icanboogie/inflector": "^1.4"
     },
-    "minimum-stability": "dev"
+    "authors": [
+        {
+            "name": "Yakin Garcia",
+            "email": "mayako.0413@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }
