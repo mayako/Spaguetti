@@ -14,6 +14,6 @@
     "minimum-stability": "dev",
     "autoload": {
         "classmap": ["src/"],
-        "files": ["Helpers/Array.php"]
+        "files": ["src/Helpers/Array.php"]
     }
 }
