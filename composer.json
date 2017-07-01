@@ -1,0 +1,8 @@
+{
+    "name": "mayako/spaguetti",
+    "description": "Help Framework",
+    "type": "library",
+    "require": {
+        "icanboogie/inflector": "^1.4"
+    }
+}
