@@ -12,5 +12,8 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "autoload-dev": {
+        "psr-4": { "mayako\\spaguetti\\": "Classes/" },
+        "files": ["Helpers/Array.php"]
+    }
 }

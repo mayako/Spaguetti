@@ -1,9 +1,9 @@
 <?php
 
-namespace Database;
+namespace Spaguetti\Database;
 
-use \PDO as PDO;
-use \Exception as Exception;
+use \PDO;
+use \Exception;
 
 final class Connection
 {

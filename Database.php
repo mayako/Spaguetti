@@ -1,5 +1,15 @@
 <?php
 
+namespace Spaguetti;
+
+use Spaguetti\Database\Connection;
+use Spaguetti\Database\Query;
+use \PDO;
+use \Exception;
+use \PDOStatement;
+use \Closure;
+
+
 class Database
 {
     /**
@@ -11,7 +21,7 @@ class Database
      */
     public function connect_to($host, $database, $username, $password = '')
     {
-        return Database\Connection::to(array
+        return Connection::to(array
             (
                 'host'     => $host,
                 'database' => $database,
@@ -168,7 +178,7 @@ class Database
      * @param  Closure $callback
      * @return mixed
      */
-    public function transaction(\Closure $callback)
+    public function transaction(Closure $callback)
     {
         $pdo = self::get_connection()->get_pdo();
 
@@ -182,7 +192,7 @@ class Database
             return $rs;
         }
 
-        catch (\Exception $e) {
+        catch (Exception $e) {
             if ($pdo->inTransaction()) {
                 $pdo->rollBack();
             }
@@ -231,7 +241,7 @@ class Database
      */
     public function table($table)
     {
-        $query = new Database\Query();
+        $query = new Query();
 
         return $query->from($table);
     }
@@ -252,7 +262,7 @@ class Database
      */
     public function get_connection()
     {
-        return Database\Connection::get_instance();
+        return Connection::get_instance();
     }
 
     /**
