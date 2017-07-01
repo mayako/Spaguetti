@@ -2,7 +2,7 @@
     "name": "mayako/spaguetti",
     "description": "Help Framework",
     "type": "library",
-    "require-dev": {
+    "require": {
         "icanboogie/inflector": "^1.4"
     },
     "authors": [
@@ -12,8 +12,8 @@
         }
     ],
     "minimum-stability": "dev",
-    "autoload-dev": {
-        "psr-4": { "mayako\\spaguetti\\": "Classes/" },
-        "files": ["Helpers/Array.php"]
+    "autoload": {
+        "classmap": ["src/"],
+        "files": ["Helpers/*"]
     }
 }
